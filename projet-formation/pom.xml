@@ -68,13 +68,14 @@
     </repository>
 </distributionManagement>
 
-<!--  <distributionManagement>
+<!--commentaire
+  <distributionManagement>
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
-  </distributionManagement> -->
+  </distributionManagement>      commentaire -->
 
   <build>
     <plugins>
@@ -113,7 +114,7 @@
           </execution>
         </executions>
       </plugin>
-     <!--   <configuration>
+     <!-- commentaire  <configuration>
           <reportPlugins>
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
@@ -145,7 +146,7 @@
               <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
           </reportPlugins>
-        </configuration>-->
+        </configuration>                commentaires -->
     </plugins>
 
     <pluginManagement>
