@@ -17,19 +17,20 @@ if  [ $1 != "-SNAPSHOT" ]
 
 then 
  	echo "it's a RELEASE"
- 	curl $RELEASE
+ 		 curl -u admin:admin123 http://192.168.100.88:8081/repository/maven-releases/
+
 else 
 	echo "it's a SNAPSHOT" 
-	curl $SNAPSHOT
+	 curl -u admin:admin123 http://192.168.100.88:8081/repository/maven-snapshots/
 fi	
 
 
 
-set 
+#set 
 
 
  	
-ip=$(ifconfig ens33 | awk -F: '/inet adr:/ {print $2}' | awk '{ print $1 }')
+##ip=$(ifconfig ens33 | awk -F: '/inet adr:/ {print $2}' | awk '{ print $1 }')
 
 
 
