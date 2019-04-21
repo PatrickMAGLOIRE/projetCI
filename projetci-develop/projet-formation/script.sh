@@ -1,11 +1,12 @@
 #!/bin/bash 
-
+#récupération de l'adresse ip de NEXUS dans une variable
 NEXUS_URL=192.168.100.88
 #DATA_PROJET_IP=192.168.100.46
+#variables contenant le port de nexus, son user et son mdp
 PORT_NEXUS=8081
 NEXUS_USER=admin 
 PASSWORD_NAXUS=admin123
-
+#variables qui récupèrent les releases et les snapshots
 SNAPSHOT=maven-snapshots
 RELEASE=maven-release 
 
@@ -16,10 +17,10 @@ if  [ $1 != "-SNAPSHOT" ]
 
 then 
  	echo "it's a RELEASE"
- 	
+ 	curl $RELEASE
 else 
 	echo "it's a SNAPSHOT" 
-
+	curl $SNAPSHOT
 fi	
 
 
