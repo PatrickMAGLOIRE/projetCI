@@ -12,9 +12,9 @@ RELEASE=maven-release
 
 NEXUS_AUTH=$NEXUS_USER:$PASSWORD_NAXUS
 NEXUS_URL_PORT=$NEXUS_URL:$PORT_NEXUS
-
+#récupération de la valeur de la version pout savoir si cest une release ou une snapshot
 if  [ $1 != "-SNAPSHOT" ] 
-
+#si c'est une release alors on télécharge via nexus la release dans maven release
 then 
  	echo "it's a RELEASE"
  		 curl -u admin:admin123 http://192.168.100.88:8081/repository/maven-releases/
@@ -26,12 +26,24 @@ fi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #set 
 
 
  	
 ##ip=$(ifconfig ens33 | awk -F: '/inet adr:/ {print $2}' | awk '{ print $1 }')
-
-
-
-scp /projet2/projetCI/projetci-develop/projet-formation/script.sh admin@NEXUS_URL.eastus.cloudapp.com:/home/azureuser/config
+#scp /projet2/projetCI/projetci-develop/projet-formation/script.sh admin@NEXUS_URL..........
